@@ -1,0 +1,32 @@
+#!/bin/zsh
+
+# Profile file. Runs on login. Environmental variables are set here.
+
+# Add utils to path
+path+=$HOME/.emacs.d/bin
+path+=$HOME/.rbenv/bin
+path+=$HOME/.local/bin
+path+=/usr/local/bin
+path+="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+
+unsetopt PROMPT_SP
+
+# Default programs
+export EDITOR="nvim"
+export BROWSER="firefox"
+
+# ~/ Clean-up
+export XDG_CONFIG_HOME="$HOME/.config"
+
+# Other program settings
+export HOMEBREW_NO_AUTO_UPDATE=1
+export ZSH_DISABLE_COMPFIX=true
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+# Enable Brew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Add GNU coreutils to path to replace OSX defaults
+path+=$HOMEBREW_PREFIX/opt/grep/libexec/gnubin
+path+=$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin
+path+=$HOMEBREW_PREFIX/opt/man-db/libexec/bin

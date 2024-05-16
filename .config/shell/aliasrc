@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# Use neovim for vim if present.
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+# Verbosity and settings that you pretty much just always are going to want.
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	bc="bc -ql" \
+	mkd="mkdir -pv" \
+    man="gman" 
+
+# Colorize commands when possible
+# ls="gls -hN --color=auto --group-directories-first" \
+alias \
+	grep="ggrep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi" \
+    ls="eza --group-directories-first" 
+
+# These common commands are just too long! Abbreviate them.
+alias \
+	ka="killall" \
+	g="git" \
+    graph="git log --graph" \
+	e="$EDITOR" \
+	v="$EDITOR" \
+	be="bundle exec"
