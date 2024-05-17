@@ -7,7 +7,6 @@ path+=$HOME/.emacs.d/bin
 path+=$HOME/.rbenv/bin
 path+=$HOME/.local/bin
 path+=/usr/local/bin
-path+="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 unsetopt PROMPT_SP
 
@@ -21,7 +20,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # Other program settings
 export HOMEBREW_NO_AUTO_UPDATE=1
 export ZSH_DISABLE_COMPFIX=true
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 # Enable Brew
 eval "$(/opt/homebrew/bin/brew shellenv)"
